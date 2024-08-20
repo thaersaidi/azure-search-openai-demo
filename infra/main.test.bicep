@@ -14,7 +14,7 @@ module main 'main.bicep' = {
     environmentName: environmentName
     location: location
     appServiceSkuName: 'B1'
-    computerVisionSkuName: 'S1'
+    computerVisionSkuName: 'S0'
     documentIntelligenceResourceGroupLocation: location
     documentIntelligenceSkuName: 'S0'
     openAiHost: 'azure'
@@ -23,7 +23,7 @@ module main 'main.bicep' = {
     searchQueryLanguage: 'en-us'
     searchQuerySpeller: 'lexicon'
     searchServiceSemanticRankerLevel: 'free'
-    searchServiceSkuName: 'standard'
+    searchServiceSkuName: 'basic'
     speechServiceSkuName: 'S0'
     storageSkuName: 'Standard_LRS'
     useApplicationInsights: false

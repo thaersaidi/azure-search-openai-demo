@@ -60,7 +60,7 @@
       "value": "${AZURE_SEARCH_SERVICE_LOCATION}"
     },
     "searchServiceSkuName": {
-      "value": "${AZURE_SEARCH_SERVICE_SKU=standard}"
+      "value": "${AZURE_SEARCH_SERVICE_SKU=basic}"
     },
     "searchQueryLanguage": {
       "value": "${AZURE_SEARCH_QUERY_LANGUAGE=en-us}"
@@ -153,13 +153,13 @@
       "value": "${USE_GPT4V=false}"
     },
     "useSpeechInputBrowser": {
-      "value": "${USE_SPEECH_INPUT_BROWSER=false}"
+      "value": "${USE_SPEECH_INPUT_BROWSER=true}"
     },
     "useSpeechOutputBrowser": {
-      "value": "${USE_SPEECH_OUTPUT_BROWSER=false}"
+      "value": "${USE_SPEECH_OUTPUT_BROWSER=true}"
     },
     "useSpeechOutputAzure": {
-      "value": "${USE_SPEECH_OUTPUT_AZURE=false}"
+      "value": "${USE_SPEECH_OUTPUT_AZURE=true}"
     },
     "speechServiceName": {
       "value": "${AZURE_SPEECH_SERVICE}"
@@ -174,16 +174,16 @@
       "value": "${AZURE_SPEECH_SERVICE_LOCATION}"
     },
     "useAuthentication": {
-      "value": "${AZURE_USE_AUTHENTICATION=false}"
+      "value": "${AZURE_USE_AUTHENTICATION=true}"
     },
     "enforceAccessControl": {
       "value": "${AZURE_ENFORCE_ACCESS_CONTROL=false}"
     },
     "enableGlobalDocuments": {
-      "value": "${AZURE_ENABLE_GLOBAL_DOCUMENT_ACCESS=false}"
+      "value": "${AZURE_ENABLE_GLOBAL_DOCUMENT_ACCESS=true}"
     },
     "enableUnauthenticatedAccess": {
-      "value": "${AZURE_ENABLE_UNAUTHENTICATED_ACCESS=false}"
+      "value": "${AZURE_ENABLE_UNAUTHENTICATED_ACCESS=true}"
     },
     "tenantId": {
       "value": "${AZURE_TENANT_ID}"
