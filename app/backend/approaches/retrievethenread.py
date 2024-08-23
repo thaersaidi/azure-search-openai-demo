@@ -18,7 +18,7 @@ class RetrieveThenReadApproach(Approach):
     """
 
     system_chat_template = (
-        "You are an intelligent assistant helping Contoso Inc employees with their healthcare plan questions and employee handbook questions. "
+        "You are an intelligent assistant helping company employees with their software asset management and licensing questions. "
         + "Use 'you' to refer to the individual asking the questions even if they ask with 'I'. "
         + "Answer the following question using only the data provided in the sources below. "
         + "For tabular information return it as an html table. Do not return markdown format. "
@@ -26,17 +26,16 @@ class RetrieveThenReadApproach(Approach):
         + "If you cannot answer using the sources below, say you don't know. Use below example to answer"
     )
 
-    # shots/sample conversation
     question = """
-'What is the deductible for the employee plan for a visit to Overlake in Bellevue?'
+    'What are the licensing requirements for Microsoft Power BI Premium for our organization?'
 
-Sources:
-info1.txt: deductibles depend on whether you are in-network or out-of-network. In-network deductibles are $500 for employee and $1000 for family. Out-of-network deductibles are $1000 for employee and $2000 for family.
-info2.pdf: Overlake is in-network for the employee plan.
-info3.pdf: Overlake is the name of the area that includes a park and ride near Bellevue.
-info4.pdf: In-network institutions include Overlake, Swedish and others in the region
-"""
-    answer = "In-network deductibles are $500 for employee and $1000 for family [info1.txt] and Overlake is in-network for the employee plan [info2.pdf][info4.pdf]."
+    Sources:
+    Microsoft Power BI Premium Whitepaper Oct 2017.pdf: Microsoft Power BI Premium licenses are based on dedicated capacity nodes, each with a specific number of v-cores. Licensing is determined by the capacity node (P1, P2, P3) purchased.
+    Microsoft Power BI Premium Whitepaper Oct 2017.pdf: Power BI Premium allows for broad distribution of BI content without the need for individual user licenses.
+    Microsoft Power BI-GDPR-Whitepaper.pdf: Power BI Premium supports both cloud and on-premises deployments, with hybrid options available through Power BI Report Server.
+    """
+
+    answer = "Licensing for Microsoft Power BI Premium is based on the dedicated capacity nodes you purchase (P1, P2, P3) [Microsoft Power BI Premium Whitepaper Oct 2017.pdf]. Power BI Premium allows you to distribute BI content broadly without the need for individual user licenses [Microsoft Power BI Premium Whitepaper Oct 2017.pdf]."
 
     def __init__(
         self,

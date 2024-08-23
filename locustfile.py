@@ -18,10 +18,9 @@ class ChatUser(HttpUser):
                     {
                         "content": random.choice(
                             [
-                                "What is included in my Northwind Health Plus plan that is not in standard?",
-                                "What does a Product Manager do?",
-                                "What happens in a performance review?",
-                                "Whats your whistleblower policy?",
+                                "What is included in the Microsoft Power BI Premium Whitepaper",
+                                "What is the difference between Power BI and Pro licenses?",
+                                "Which Microsoft Power BI service plans are available under the Open License (OL)?"
                             ]
                         ),
                         "role": "user",

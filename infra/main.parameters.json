@@ -48,7 +48,7 @@
       "value": "${AZURE_DOCUMENTINTELLIGENCE_LOCATION}"
     },
     "searchIndexName": {
-      "value": "${AZURE_SEARCH_INDEX=gptkbindex}"
+      "value": "${AZURE_SEARCH_INDEX=sam-documents-vector}"
     },
     "searchServiceName": {
       "value": "${AZURE_SEARCH_SERVICE}"
@@ -69,7 +69,7 @@
       "value": "${AZURE_SEARCH_QUERY_SPELLER=lexicon}"
     },
     "searchServiceSemanticRankerLevel": {
-      "value": "${AZURE_SEARCH_SEMANTIC_RANKER=free}"
+      "value": "${AZURE_SEARCH_SEMANTIC_RANKER=disabled}"
     },
     "storageAccountName": {
       "value": "${AZURE_STORAGE_ACCOUNT}"
@@ -150,7 +150,7 @@
       "value": "${USE_VECTORS=true}"
     },
     "useGPT4V": {
-      "value": "${USE_GPT4V=false}"
+      "value": "${USE_GPT4V=true}"
     },
     "useSpeechInputBrowser": {
       "value": "${USE_SPEECH_INPUT_BROWSER=true}"
@@ -174,7 +174,7 @@
       "value": "${AZURE_SPEECH_SERVICE_LOCATION}"
     },
     "useAuthentication": {
-      "value": "${AZURE_USE_AUTHENTICATION=true}"
+      "value": "${AZURE_USE_AUTHENTICATION=false}"
     },
     "enforceAccessControl": {
       "value": "${AZURE_ENFORCE_ACCESS_CONTROL=false}"
@@ -219,13 +219,13 @@
       "value": "${USE_FEATURE_INT_VECTORIZATION}"
     },
     "useUserUpload": {
-      "value": "${USE_USER_UPLOAD}"
+      "value": "${USE_USER_UPLOAD}=true"
     },
     "useLocalPdfParser": {
       "value": "${USE_LOCAL_PDF_PARSER}"
     },
     "useLocalHtmlParser": {
-      "value": "${USE_LOCAL_HTML_PARSER}"
+      "value": "${USE_LOCAL_HTML_PARSER}=true"
     },
     "runningOnGh": {
       "value": "${GITHUB_ACTIONS}"

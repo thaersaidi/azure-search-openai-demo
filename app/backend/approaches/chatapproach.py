@@ -10,21 +10,22 @@ from approaches.approach import Approach
 
 class ChatApproach(Approach, ABC):
     query_prompt_few_shots: list[ChatCompletionMessageParam] = [
-        {"role": "user", "content": "How did crypto do last year?"},
-        {"role": "assistant", "content": "Summarize Cryptocurrency Market Dynamics from last year"},
-        {"role": "user", "content": "What are my health plans?"},
-        {"role": "assistant", "content": "Show available health plans"},
+        {"role": "user", "content": "How many licenses do we need for Power BI?"},
+        {"role": "assistant", "content": "Analyze Power BI licensing requirements based on current usage"},
+        {"role": "user", "content": "What's the difference between Dynamics 365 Sales Enterprise and Professional?"},
+        {"role": "assistant", "content": "Compare features and pricing of Dynamics 365 Sales Enterprise vs Professional"},
+        {"role": "user", "content": "Are we compliant with our Microsoft 365 licenses?"},
     ]
     NO_RESPONSE = "0"
 
     follow_up_questions_prompt_content = """Generate 3 very brief follow-up questions that the user would likely ask next.
-    Enclose the follow-up questions in double angle brackets. Example:
-    <<Are there exclusions for prescriptions?>>
-    <<Which pharmacies can be ordered from?>>
-    <<What is the limit for over-the-counter medication?>>
-    Do no repeat questions that have already been asked.
-    Make sure the last question ends with ">>".
-    """
+Enclose the follow-up questions in double angle brackets. Example:
+<<How does the Microsoft Volume Licensing program work?>>
+<<What are the licensing requirements for Windows Server?>>
+<<Can Office 365 licenses be transferred to another user?>>
+Do not repeat questions that have already been asked.
+Make sure the last question ends with ">>".
+"""
 
     query_prompt_template = """Below is a history of the conversation so far, and a new question asked by the user that needs to be answered by searching in a knowledge base.
     You have access to Azure AI Search index with 100's of documents.
