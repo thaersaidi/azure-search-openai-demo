@@ -29,10 +29,10 @@ class ChatUser(HttpUser):
                 "context": {
                     "overrides": {
                         "retrieval_mode": "hybrid",
-                        "semantic_ranker": True,
+                        "semantic_ranker": False,
                         "semantic_captions": False,
                         "top": 3,
-                        "suggest_followup_questions": False,
+                        "suggest_followup_questions": True,
                     },
                 },
             },
@@ -52,7 +52,7 @@ class ChatUser(HttpUser):
                 "context": {
                     "overrides": {
                         "retrieval_mode": "hybrid",
-                        "semantic_ranker": True,
+                        "semantic_ranker": False,
                         "semantic_captions": False,
                         "top": 3,
                         "suggest_followup_questions": False,
@@ -85,7 +85,7 @@ class ChatVisionUser(HttpUser):
                         "minimum_reranker_score": 0,
                         "minimum_search_score": 0,
                         "retrieval_mode": "hybrid",
-                        "semantic_ranker": True,
+                        "semantic_ranker": False,
                         "semantic_captions": False,
                         "suggest_followup_questions": False,
                         "use_oid_security_filter": False,
@@ -112,7 +112,7 @@ class ChatVisionUser(HttpUser):
                         "minimum_reranker_score": 0,
                         "minimum_search_score": 0,
                         "retrieval_mode": "hybrid",
-                        "semantic_ranker": True,
+                        "semantic_ranker": False,
                         "semantic_captions": False,
                         "suggest_followup_questions": False,
                         "use_oid_security_filter": False,

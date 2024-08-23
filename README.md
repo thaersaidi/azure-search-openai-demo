@@ -5,6 +5,43 @@ This solution's backend is written in Python. There are also [**JavaScript**](ht
 [![Open in GitHub Codespaces](https://img.shields.io/static/v1?style=for-the-badge&label=GitHub+Codespaces&message=Open&color=brightgreen&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=599293758&machine=standardLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&location=WestUs2)
 [![Open in Dev Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/azure-samples/azure-search-openai-demo)
 
+## Customizations & Feature Summary 
+
+### Enabled Features
+- Vectors: The system uses vector embeddings for search and retrieval.
+- GPT-4V: The system utilizes GPT-4 with vision capabilities.
+- Speech Input (Browser): Speech-to-text functionality is enabled in the browser.
+- Speech Output:
+  - Browser: Text-to-speech functionality is enabled in the browser.
+  - Azure: Azure's speech synthesis service is used for text-to-speech.
+- Global Document Access: Users can access all documents in the system, regardless of ownership.
+- Unauthenticated Access: The system allows access without authentication.
+- User Upload: Users can upload their own documents to the system.
+- Local HTML Parser: The system uses a local parser for HTML documents.
+
+### Disabled Features
+- Authentication: User authentication is not enforced.
+- Access Control: Document-level access control is not enforced.
+
+### Other Notable Settings
+- OpenAI Host: Set to use Azure's OpenAI service.
+- Application Insights: Enabled for monitoring and analytics.
+- Search Service: 
+  - Uses a basic SKU
+  - Query language set to English (US)
+  - Uses lexicon-based spelling correction
+  - Semantic ranker is disabled
+- Storage: Uses Standard LRS (Locally Redundant Storage)
+- App Service Plan: Uses B1 (Basic) tier
+- Public Network Access: Enabled
+- Private Endpoint: Not used
+- Network Bypass: Allows Azure Services
+
+### Configurable or Undefined Features
+- Local PDF Parser: Value not hardcoded, depends on environment variable
+- Integrated Vectorization: Value not hardcoded, depends on environment variable
+
+
 ## Table of Contents
 
 - [Features](#features)
